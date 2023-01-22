@@ -1,0 +1,15 @@
+nodes:
+  - input.visual:
+      source: uploads/1674357203979-WIN_20221113_05_04_02_Pro.mp4
+  - model.yolo:
+      detect:
+        - cat
+        - cup
+        - laptop
+        - keyboard
+        - mouse
+  - draw.bbox:
+      show_labels: true
+  - output.csv_writer:
+      file_path: ./data/stats.csv
+      logging_interval: 1
